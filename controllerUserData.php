@@ -87,13 +87,19 @@ if(isset($_POST['signup'])){
             $fetch = mysqli_fetch_assoc($res);
             $fetch_pass = $fetch['password'];
             //if(password_verify($password, $fetch_pass)){
+            if(password_verify($password, $fetch_pass)){
                 $_SESSION['email'] = $email;
                 $status = $fetch['status'];
                 if($status == 'verified'){
                   $_SESSION['email'] = $email;
                   $_SESSION['password'] = $password;
-                    header('location: index.html');
+                    header('location: index2.html');
                     exit();
+                }else{
+                    $info = "It's look like you haven't still verify your email - $email";
+                    $_SESSION['info'] = $info;
+                    header('location: user-otp.php');
+                }
                 /*}else{
                     $info = "It's look like you haven't still verify your email - $email";
                     $_SESSION['info'] = $info;
