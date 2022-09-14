@@ -21,11 +21,11 @@ if(isset($_POST['signup'])){
     }
     if(count($errors) === 0){
 
-       // $encpass = password_hash($password, PASSWORD_BCRYPT);
+        $encpass = password_hash($password, PASSWORD_BCRYPT);
         $code = 0;
         $status = "verified";
         $insert_data = "INSERT INTO usertable (name, email, password, code, status)
-                        values('$name', '$email', '$password', '$code', '$status')";
+                        values('$name', '$email', '$encpass', '$code', '$status')";
         $data_check = mysqli_query($con, $insert_data);
         if($data_check){
             header('location: login-user.php');
@@ -44,9 +44,9 @@ if(isset($_POST['signup'])){
             }else{
                 $errors['otp-error'] = "Failed while sending code!";
             }
-        }else{
+        }*/else{
             $errors['db-error'] = "Failed while inserting data into database!";
-        }*/
+        }
     }
 
 }

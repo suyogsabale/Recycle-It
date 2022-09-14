@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="col-md-4 offset-md-4 form login-form">
                     <form action="login-user.php" method="POST" autocomplete="">
-                        <h2 class="text-center" style="color:black;"> User Login </h2>
+                        <h2 class="text-center" style="color:black;"> Collector Login </h2>
                         <p class="text-center" style="color:black;"><b>Login with your email and password.</b></p>
                         <?php
                         if(count($errors) > 0){
@@ -95,7 +95,7 @@
          <!-- <i class="fa fa-user" aria-hidden="true">Admin</i> -->
          <a href="adminsignup/adminlogin.php"> <i class="fa fa-lock" aria-hidden="true"> Login As Admin | </i></a>
          <!-- <i class="fa fa-users" aria-hidden="true"></i> -->
-         <a href="login-vendor.php"> <i class="fa fa-lock" aria-hidden="true">  Login As Collector</i></a>
+         <a href="adminsignup/login-user.php"> <i class="fa fa-lock" aria-hidden="true">  Login As User</i></a>
         </p>
     </div>
     <!--Content ends-->

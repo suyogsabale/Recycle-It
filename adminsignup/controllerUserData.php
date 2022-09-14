@@ -64,7 +64,7 @@ if(isset($_POST['signup'])){
     }
     if(count($errors) === 0){
 
-       $encpass = password_hash($password, PASSWORD_BCRYPT);
+            $encpass = password_hash($password, PASSWORD_BCRYPT);
         $code = 0;
         $status = "verified";
         $insert_data = "INSERT INTO usertable (name, email, password, code, status)

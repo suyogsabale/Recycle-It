@@ -337,6 +337,12 @@ function getData(data){
     link.href = `waste_insert_controller.php?id=${data}`;
     console.log("Row Id: "+data);
 }
+
+
+
+
+
+
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
